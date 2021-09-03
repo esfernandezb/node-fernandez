@@ -6,7 +6,9 @@ const app = express()
 
 import productsRoutes from './routes/products.routes'
 
+app.use(express.json())
 app.use(morgan('dev'));
+
 
 app.get('/', (req, res) => {
     res.json({

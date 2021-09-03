@@ -3,6 +3,7 @@ import mongoose from 'mongoose'
 mongoose.connect("mongodb://Localhost/companydb",{
     useNewUrlParser: true,
     useUnifiedTopology: true,
+    
    
 })
 

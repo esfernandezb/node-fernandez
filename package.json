@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "build":"babel src --out-dir build",
-    "start": "nodemon src/index.js --exec babel-node"
+    "dev": "nodemon src/index.js --exec babel-node",
+    "start": "node build/index.js"
   },
-  "author": "",
+  "author": "elena",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",

@@ -1,8 +1,9 @@
 import express from 'express'
 import morgan from 'morgan'
 
-
+import {createRole, createRoles} from './libs/initialSetup'
 const app = express()
+createRoles();
 
 import productsRoutes from './routes/products.routes'
 import authRoutes from './routes/auth.routes'

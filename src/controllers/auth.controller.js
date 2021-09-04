@@ -1,6 +1,8 @@
 import User from '../models/User'
 import jwt from 'jsonwebtoken'
 import config from '../config'
+import Role from '../models/Role';
+
 export const singUp = async (req, res) => {
     
     

@@ -7,7 +7,7 @@ createRoles();
 
 import productsRoutes from './routes/products.routes'
 import authRoutes from './routes/auth.routes'
-
+import usersRoutes from './routes/user.routes'
 app.use(express.json())
 app.use(morgan('dev'));
 
@@ -22,6 +22,7 @@ app.get('/', (req, res) => {
 
 app.use('/api/products', productsRoutes)
 app.use('/api/auth', authRoutes);
+app.use('/api/users', usersRoutes)
 
 export default app;
 

@@ -41,7 +41,10 @@ export const singin = async (req, res) => {
     const matchPassword = await User.comparePassword(req.body.password, userFound.password)
     
     if (!matchPassword) return res.status(401).json({token: null, message: 'Invalid password'})
-    console.log(userFound)
+    
+    const token = jwt.sign({id: userFound._id}, config.SECRET, {
+      expiresIn: 86400
+    })
 
-    res.json({token: ''})
+    res.json({token})
 }

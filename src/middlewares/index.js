@@ -1,4 +1,4 @@
-import * as authJwt from "./authJwt";
-import * as verifySignup from "./verifySignup";
+import{verifyToken} from "./authJwt";
 
-export { authJwt, verifySignup };
+
+export { verifyToken };
